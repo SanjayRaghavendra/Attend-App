@@ -22,12 +22,16 @@ function(){
     document.getElementById('alert').innerText="Please enter your username and password";
 
   }
-  else{
+  else if(username.value == "sanjay" && password.value == "sanjay"){
 
-      console.log(username);
-      console.log(password);
-      document.querySelector('.bg-modal').style.display = 'block';
-      document.getElementById('alert').innerText="\nHello!!! "+ username.value;
+      // console.log(username);
+      // console.log(password);
+      // document.querySelector('.bg-modal').style.display = 'block';
+      // document.getElementById('alert').innerText="\nHello!!! "+ username.value;
+      sessionStorage.setItem('ok', document.getElementById('username').value);
+
+      location.href = './2.html';
+
     }
 });
 
